@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="popup.css"><title>SentinelAI</title></head>
+<body>
+  <header><img src="shield.svg" alt=""><div><strong>SentinelAI</strong><span>Browser Guard</span></div><label class="switch"><input id="enabled" type="checkbox"><i></i></label></header>
+  <main>
+    <section id="status" class="status"><span class="dot"></span><div><strong>Ready</strong><small>Waiting for a public page</small></div></section>
+    <section id="result" class="result hidden">
+      <div class="score"><strong id="score">0</strong><small>/100</small></div>
+      <div><span id="verdict" class="verdict">UNKNOWN</span><p id="target"></p><small id="summary"></small></div>
+    </section>
+    <button id="scan" class="primary">Scan current page now</button>
+    <section class="file-card">
+      <div><strong>Check a downloaded file</strong><small>The file stays on your device. Only its SHA-256 hash is checked.</small></div>
+      <label for="file">Choose file</label><input id="file" type="file">
+      <div id="fileResult" class="file-result hidden"></div>
+    </section>
+    <p id="error" class="error"></p>
+  </main>
+  <footer><button id="dashboard">Open dashboard</button><button id="options">Settings</button></footer>
+  <script src="popup.js"></script>
+</body>
+</html>
+
